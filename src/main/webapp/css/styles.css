@@ -1,5 +1,5 @@
 body {
-    color: white;
+    color: #222;
 }
 footer {
     position:fixed;
@@ -9,6 +9,7 @@ footer {
     width:100%;
     background:#222;
     padding: 2%;
+    color: white;
 }
 
 footer a {

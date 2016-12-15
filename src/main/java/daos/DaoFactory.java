@@ -9,4 +9,9 @@ public class DaoFactory {
         }
         return adsDao;
     }
+
+    public static Users userDao() {
+        return new ArrayListUsers();
+    }
+
 }
