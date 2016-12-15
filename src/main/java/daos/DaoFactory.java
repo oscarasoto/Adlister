@@ -1,3 +1,5 @@
+package daos;
+
 public class DaoFactory {
     private static Ads adsDao;
 
@@ -7,4 +9,9 @@ public class DaoFactory {
         }
         return adsDao;
     }
+
+    public static Users userDao() {
+        return new ArrayListUsers();
+    }
+
 }
