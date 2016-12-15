@@ -1,3 +1,8 @@
+package daos;
+
+import daos.Ad;
+import daos.Ads;
+
 import java.util.ArrayList;
 import java.util.List;
 
