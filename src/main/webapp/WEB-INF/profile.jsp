@@ -11,9 +11,11 @@
 
     <div class="container">
         <h1>Viewing your profile.</h1>
-        <h3>Hello: "<c:out value="${sessionScope.username}"/>"</h3>
+        <h3>Hello: "${sessionScope.username}"!</h3>
 
     </div>
+
+<%@include file="partials/footer.jsp"%>
 
 </body>
 </html>
