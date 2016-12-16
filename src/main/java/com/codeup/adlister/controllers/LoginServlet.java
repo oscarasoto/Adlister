@@ -8,12 +8,13 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 @WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        if (request.getSession().getAttribute("user") != null) {
+        if (request.getSession().getAttribute("username") != null) {
             response.sendRedirect("/profile");
             return;
         }
@@ -31,19 +32,22 @@ public class LoginServlet extends HttpServlet {
         if (user == null || !user.getPassword().equals(password)) {
             // show the login form again
             doGet(request, response);
-        }
-
-        response.sendRedirect("profile.jsp");
-
-        // TODO: check the submitted password against what you have in your database
-        boolean validAttempt = false;
-
-        if (validAttempt) {
-            // TODO: store the logged in user object in the session, instead of just the username
-            request.getSession().setAttribute("user", username);
-            response.sendRedirect("/profile");
         } else {
-            response.sendRedirect("/login");
+            HttpSession session = request.getSession();
+            session.setAttribute("username", username);
+            response.sendRedirect("/profile");
         }
+
+
+//        // TODO: check the submitted password against what you have in your database
+//        boolean validAttempt = false;
+//
+//        if (validAttempt) {
+//            // TODO: store the logged in user object in the session, instead of just the username
+//            request.getSession().setAttribute("user", username);
+//            response.sendRedirect("/profile");
+//        } else {
+//            response.sendRedirect("/login");
+//        }
     }
 }
