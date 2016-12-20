@@ -41,4 +41,5 @@ ALTER TABLE users MODIFY password VARCHAR(250) NOT NULL;
 
 SELECT char_length(password) FROM users;
 
-SELECT * FROM ads WHERE id = 1;
+SELECT * FROM users WHERE id = 3;
+
