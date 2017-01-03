@@ -6,21 +6,28 @@
             <jsp:param name="title" value="Viewing All The Ads" />
         </jsp:include>
     </head>
-    <body>
+    <body id="adsBody">
         <jsp:include page="/WEB-INF/partials/navbar.jsp" />
+    <div class="container center-block" id="adsContainer">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 id="title">Welcome to Adlister!!</h1>
+            </div>
+        </div>
 
-        <div class="container">
-            <h1>Here Are all the ads!</h1>
-
+        <div class="row center-block ads">
             <c:forEach var="ad" items="${ads}">
-                <div class="col-md-6">
-                    <h2>${ad.title}</h2>
+                <div id="ad" class="col-xs-3 col-center">
+                    <div class="ad">
+                    <h3>${ad.title}</h3>
                     <p>${ad.description}</p>
                     <a href="/ads/show?id=${ad.id}">See More</a>
+                    </div>
                 </div>
-
             </c:forEach>
         </div>
+
+    </div>
 
         <jsp:include page="/WEB-INF/partials/footer.jsp" />
     </body>

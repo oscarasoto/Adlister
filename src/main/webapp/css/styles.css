@@ -1,14 +1,18 @@
 body {
     color: #222;
-    background-color: red;
 }
+
+#navbar {
+    background-color:#363B3F;
+}
+
 footer {
     position:fixed;
     left:0px;
     bottom:0px;
     height:200px;
     width:100%;
-    background:#222;
+    background:#363B3F;
     padding: 2%;
     color: white;
 }
@@ -28,4 +32,41 @@ form {
 h1 {
     color:#9D9D9D;
     margin-top: 7%;
+}
+
+.ads {
+    background-color: #5D666D;
+    color: #FFFFFF;
+    align-content: center;
+
+}
+
+.ad {
+    background-color: #FFFFFF;
+    color: #5C554B;
+    width: auto;
+    height: 250px;
+    margin: 0 2px;
+    padding: 0 4px;
+}
+#ad{
+    padding: 0;
+}
+
+.col-center {
+    float: none;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#title {
+    color: #FFFFFF;
+}
+#adsContainer {
+    background-color: #5D666D;
+    align-content: center;
+    height: 100%;
+}
+#adsBody {
+    background-color: #5D666D;
 }
